@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <header>change price limit</header>
+    <section class='form'>
+        <h3>edit {{ a.name }}'s price limit</h3>
+        <form  method="POST" action='{{ url_for("alertBp.edit", id=a._id )}}'>
+            <div class="form-group">
+              <label>new price limit</label>
+              <input type="text" class="form-control" name="p">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">change</button>
+          </form>
+
+    </section>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <ul>
+        {% for i in a %}
+            <li>
+                <a href='{{ url_for("alertBp.edit", id=i._id )}}'><h3>{{ i.name }}</h3></a>
+                current price : {{ i.item.price }} <br>
+                your price : {{ i.priceLimit }}
+                <p></p>
+            </li>
+        {% endfor %} 
+    </ul>
+{% endblock %}
